@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: ISD Dashboard
+Plugin Name: ISD Wordpress RSS Feeds Dashboard Plugin
 Plugin URI: http://www.mikeleachcreative.co.uk/wordpress-plugins/ISD-feeds-plugin
 Description: I created this plugin to pull in feeds from a category from our blog so that we can promote to our clients from the dashboard.
 Version: 1.0
