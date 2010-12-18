@@ -1,4 +1,4 @@
-=== Feeds Plugin ===
+=== iSimpleDesign Feeds Plugin ===
 Contributors: Sam East
 Tags: feeds, dashboard, promotion, blog
 Requires at least: 2.0
