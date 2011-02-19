@@ -3,7 +3,7 @@ Contributors: Sam East
 Tags: feeds, dashboard, promotion, blog
 Requires at least: 2.0
 Tested up to: 3.0
-Stable tag: 1.0
+Stable tag: 1.01
 License: GPLv2
 
 
@@ -31,11 +31,19 @@ You can find a video tutorial on how to use this plugin on our website
 	* http://www.example.com/?tag=tagname&amp;feed=rss2
 	* http://example.com/category/categoryname/feed
 	* http://example.com/tag/tagname/feed
+	
+If you would like to put this feed within your template please use the following code
+&lt;?php isimpledesign_feeds(); ?&gt;
+
+If you would like to put this feed within a post or page use the following code.
+[isimpledesign_feeds]
 
 
 == Installation ==
 
-Upload the MLC Feeds plugin to your blog, Activate it, 
+Upload the iSimpleDesign Feeds plugin to your blog, Activate it, 
+
+Go to the menu in setting and change the settings to suit your needs.
 
 1, 2: You're done!
 
