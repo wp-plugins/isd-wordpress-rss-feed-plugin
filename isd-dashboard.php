@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: ISD Wordpress RSS Feeds Dashboard Plugin
-Plugin URI: http://www.mikeleachcreative.co.uk/wordpress-plugins/ISD-feeds-plugin
+Plugin Name: iSimpleDesign WP RSS Feeds Plugin
+Plugin URI: http://www.isimpledesign.co.uk/blog/wordpress-rss-blog-feed-plugin
 Description: I created this plugin to pull in feeds from a category from our blog so that we can promote to our clients from the dashboard.
 Version: 1.0
 Author: Samuel East
-Author URI: http://www.mikeleachcreative.co.uk
+Author URI: http://www.isimpledesign.co.uk
 License: A "Slug" license name e.g. GPL2
 */
 
@@ -131,8 +131,14 @@ $excerpt	= get_option("ISD-excerpt");
 <span>http://example.com/tag/tagname/feed</span>
 
 
-<h2>You can also grab any RSS feeds links from the following site</h2>
+<h3>You can also grab any RSS feeds links from the following site</h3>
 <span><a href="http://www.feedage.com" target="_blank">http://www.feedage.com/</a></span>
+
+<h3>If you would like to put this feed within your template please use the following code</h3>
+<code>&lt;?php isimpledesign_feeds(); ?&gt;</code>
+
+<h3>If you would like to put this feed within a post or page use the following code.</h3>
+<code>[isimpledesign_feeds]</code>
 
 <?php		}
 	}
@@ -141,7 +147,7 @@ $excerpt	= get_option("ISD-excerpt");
 // insert into admin panel
 add_action('admin_menu', array('ISD_Feed_Admin','add_config_page'));
 
-function ISD_feed() {
+function isimpledesign_feeds() {
      
 	$feed_link_url = get_option("ISD-feed-link");
 	$post_limit = get_option("ISD-limit");
@@ -168,11 +174,11 @@ endforeach;
 function example_add_dashboard_widgets() {
 	$head_text_url = get_option("ISD-head-text"); 
 	$head_icon_url = get_option("ISD-icon");
-	wp_add_dashboard_widget("example_dashboard_widget", "<img style='float:left;' src='$head_icon_url' width='25' height='25' alt='' /><span class='isd-head'>$head_text_url</span>", "ISD_feed");	
+	wp_add_dashboard_widget("example_dashboard_widget", "<img style='float:left;' src='$head_icon_url' width='25' height='25' alt='' /><span class='isd-head'>$head_text_url</span>", "isimpledesign_feeds");	
 } 
 
 
-
+add_shortcode( 'isimpledesign_feeds', 'isimpledesign_feeds' );
 add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
 
 
